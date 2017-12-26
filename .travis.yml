@@ -4,3 +4,6 @@ osx_image: xcode9.2
 
 xcode_project: OpenWeatherMapKit.xcodeproj
 xcode_scheme: OpenWeatherMapKit
+
+script:
+- xcodebuild -project OpenWeatherMapKit.xcodeproj -scheme OpenWeatherMapKit clean build test
