@@ -1,0 +1,6 @@
+language: swift
+
+osx_image: xcode9.2
+
+xcode_project: OpenWeatherMapKit.xcodeproj
+xcode_scheme: OpenWeatherMapKitTests
