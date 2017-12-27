@@ -61,6 +61,9 @@ internal class RequestBuilder {
 
     func build() -> String {
 
+        // TODO: add configuration validation
+        // TODO: cover by unit test
+
         if weatherMode == .current {
             serviceUrl += "/weather?"
         }

@@ -9,15 +9,11 @@
 import XCTest
 @testable import OpenWeatherMapKit
 
-class OpenWeatherMapKitTests: XCTestCase {
+/// Integration tests of kit's main class
+class OpenWeatherMapKitITTests: XCTestCase {
 
     override func setUp() {
         OpenWeatherMapKit.initialize(withAppId: "eec2dfbd18617aa7c7c2654b184f560d")
-    }
-
-    override func tearDown() {
-        // Put teardown code here. This method is called after the invocation of each test method in the class.
-        super.tearDown()
     }
     
     func test_currentWeather_forCity() {
@@ -76,13 +72,6 @@ class OpenWeatherMapKitTests: XCTestCase {
 
         XCTAssertNotNil(result)
         XCTAssertNil(caughtError)
-    }
-    
-    func testPerformanceExample() {
-        // This is an example of a performance test case.
-        self.measure {
-            // Put the code you want to measure the time of here.
-        }
     }
     
 }
