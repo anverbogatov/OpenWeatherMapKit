@@ -69,7 +69,7 @@ class OpenWeatherMapKit {
             if let error = error {
                 callback(nil, error)
             }
-            guard let data = data, let response = response else { return }
+            guard let data = data else { return }
             let jsonData = try? JSONSerialization.jsonObject(with: data, options: .mutableContainers) as! NSDictionary
             if let jsonData = jsonData {
                 let weatherStats = jsonData["main"] as! NSDictionary
