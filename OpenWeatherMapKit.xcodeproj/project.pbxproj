@@ -10,7 +10,7 @@
 		87B862D11FF2ADCD00E9E38D /* Constants.swift in Sources */ = {isa = PBXBuildFile; fileRef = 87B862D01FF2ADCD00E9E38D /* Constants.swift */; };
 		87B862D31FF2B1EA00E9E38D /* RequestBuilder.swift in Sources */ = {isa = PBXBuildFile; fileRef = 87B862D21FF2B1EA00E9E38D /* RequestBuilder.swift */; };
 		87EA0AC61FECB12800E3EEEA /* OpenWeatherMapKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 87EA0ABC1FECB12800E3EEEA /* OpenWeatherMapKit.framework */; };
-		87EA0ACB1FECB12800E3EEEA /* OpenWeatherMapKitTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 87EA0ACA1FECB12800E3EEEA /* OpenWeatherMapKitTests.swift */; };
+		87EA0ACB1FECB12800E3EEEA /* OpenWeatherMapKitITTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 87EA0ACA1FECB12800E3EEEA /* OpenWeatherMapKitITTests.swift */; };
 		87EA0ACD1FECB12800E3EEEA /* OpenWeatherMapKit.h in Headers */ = {isa = PBXBuildFile; fileRef = 87EA0ABF1FECB12800E3EEEA /* OpenWeatherMapKit.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		87EA0AD71FECB3D200E3EEEA /* OpenWeatherMapKit.swift in Sources */ = {isa = PBXBuildFile; fileRef = 87EA0AD61FECB3D200E3EEEA /* OpenWeatherMapKit.swift */; };
 		87EA0AD91FECB6E200E3EEEA /* Models.swift in Sources */ = {isa = PBXBuildFile; fileRef = 87EA0AD81FECB6E200E3EEEA /* Models.swift */; };
@@ -33,7 +33,7 @@
 		87EA0ABF1FECB12800E3EEEA /* OpenWeatherMapKit.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = OpenWeatherMapKit.h; sourceTree = "<group>"; };
 		87EA0AC01FECB12800E3EEEA /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		87EA0AC51FECB12800E3EEEA /* OpenWeatherMapKitTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = OpenWeatherMapKitTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
-		87EA0ACA1FECB12800E3EEEA /* OpenWeatherMapKitTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OpenWeatherMapKitTests.swift; sourceTree = "<group>"; };
+		87EA0ACA1FECB12800E3EEEA /* OpenWeatherMapKitITTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OpenWeatherMapKitITTests.swift; sourceTree = "<group>"; };
 		87EA0ACC1FECB12800E3EEEA /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		87EA0AD61FECB3D200E3EEEA /* OpenWeatherMapKit.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OpenWeatherMapKit.swift; sourceTree = "<group>"; };
 		87EA0AD81FECB6E200E3EEEA /* Models.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Models.swift; sourceTree = "<group>"; };
@@ -58,6 +58,14 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		876DB55F1FF4976700823C2E /* Integration Tests */ = {
+			isa = PBXGroup;
+			children = (
+				87EA0ACA1FECB12800E3EEEA /* OpenWeatherMapKitITTests.swift */,
+			);
+			path = "Integration Tests";
+			sourceTree = "<group>";
+		};
 		87B862D41FF3463900E9E38D /* Supporting Files */ = {
 			isa = PBXGroup;
 			children = (
@@ -124,7 +132,7 @@
 		87EA0AC91FECB12800E3EEEA /* OpenWeatherMapKitTests */ = {
 			isa = PBXGroup;
 			children = (
-				87EA0ACA1FECB12800E3EEEA /* OpenWeatherMapKitTests.swift */,
+				876DB55F1FF4976700823C2E /* Integration Tests */,
 				87EA0ACC1FECB12800E3EEEA /* Info.plist */,
 			);
 			path = OpenWeatherMapKitTests;
@@ -252,7 +260,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				87EA0ACB1FECB12800E3EEEA /* OpenWeatherMapKitTests.swift in Sources */,
+				87EA0ACB1FECB12800E3EEEA /* OpenWeatherMapKitITTests.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
