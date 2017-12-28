@@ -14,6 +14,8 @@ class RequestBuilderTests: XCTestCase {
     private let city = "Samara"
     private let countryCode = "ru"
     private let token = "abcdefg123456"
+    private let latitude = 3.14
+    private let longitude = -3.14
 
     func test_requestBuildWithCityName() {
 
@@ -46,6 +48,29 @@ class RequestBuilderTests: XCTestCase {
 
         XCTAssertNotNil(url)
         XCTAssertEqual(url, "\(Constants.Endpoints.kOpenWeatherMapApiEndPoint)/weather?q=\(city),\(countryCode)&appid=\(token)")
+    }
+
+    func test_requestBuildWithCoordinates() {
+
+        let url = RequestBuilder()
+            .setLatitude(lat: latitude)
+            .setLongitude(lon: longitude)
+            .build()
+
+        XCTAssertNotNil(url)
+        XCTAssertEqual(url, "\(Constants.Endpoints.kOpenWeatherMapApiEndPoint)/weather?lat=\(latitude)&lon=\(longitude)")
+    }
+
+    func test_requestBuildWithCoordinatesAndToken() {
+
+        let url = RequestBuilder()
+            .setLatitude(lat: latitude)
+            .setLongitude(lon: longitude)
+            .setToken(token: token)
+            .build()
+
+        XCTAssertNotNil(url)
+        XCTAssertEqual(url, "\(Constants.Endpoints.kOpenWeatherMapApiEndPoint)/weather?lat=\(latitude)&lon=\(longitude)&appid=\(token)")
     }
 
 }
