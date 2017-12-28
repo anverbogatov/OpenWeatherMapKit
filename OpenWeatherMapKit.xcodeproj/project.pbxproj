@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		876DB5621FF4986C00823C2E /* RequestBuilderTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 876DB5611FF4986C00823C2E /* RequestBuilderTests.swift */; };
 		87B862D11FF2ADCD00E9E38D /* Constants.swift in Sources */ = {isa = PBXBuildFile; fileRef = 87B862D01FF2ADCD00E9E38D /* Constants.swift */; };
 		87B862D31FF2B1EA00E9E38D /* RequestBuilder.swift in Sources */ = {isa = PBXBuildFile; fileRef = 87B862D21FF2B1EA00E9E38D /* RequestBuilder.swift */; };
 		87EA0AC61FECB12800E3EEEA /* OpenWeatherMapKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 87EA0ABC1FECB12800E3EEEA /* OpenWeatherMapKit.framework */; };
@@ -27,6 +28,7 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		876DB5611FF4986C00823C2E /* RequestBuilderTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RequestBuilderTests.swift; sourceTree = "<group>"; };
 		87B862D01FF2ADCD00E9E38D /* Constants.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Constants.swift; sourceTree = "<group>"; };
 		87B862D21FF2B1EA00E9E38D /* RequestBuilder.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RequestBuilder.swift; sourceTree = "<group>"; };
 		87EA0ABC1FECB12800E3EEEA /* OpenWeatherMapKit.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = OpenWeatherMapKit.framework; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -64,6 +66,14 @@
 				87EA0ACA1FECB12800E3EEEA /* OpenWeatherMapKitITTests.swift */,
 			);
 			path = "Integration Tests";
+			sourceTree = "<group>";
+		};
+		876DB5601FF4984800823C2E /* Unit Tests */ = {
+			isa = PBXGroup;
+			children = (
+				876DB5611FF4986C00823C2E /* RequestBuilderTests.swift */,
+			);
+			path = "Unit Tests";
 			sourceTree = "<group>";
 		};
 		87B862D41FF3463900E9E38D /* Supporting Files */ = {
@@ -133,6 +143,7 @@
 			isa = PBXGroup;
 			children = (
 				876DB55F1FF4976700823C2E /* Integration Tests */,
+				876DB5601FF4984800823C2E /* Unit Tests */,
 				87EA0ACC1FECB12800E3EEEA /* Info.plist */,
 			);
 			path = OpenWeatherMapKitTests;
@@ -261,6 +272,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				87EA0ACB1FECB12800E3EEEA /* OpenWeatherMapKitITTests.swift in Sources */,
+				876DB5621FF4986C00823C2E /* RequestBuilderTests.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
