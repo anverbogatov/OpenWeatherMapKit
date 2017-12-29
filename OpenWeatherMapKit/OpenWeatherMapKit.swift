@@ -33,16 +33,16 @@ class OpenWeatherMapKit {
     ///   - callback: closure that will be invoked as the result of API call
     func currentWeather(forCoordiante coord: (latitude: Double, longitude: Double),
                         callback: @escaping (WeatherItem?, Error?) -> ()) {
-        requestWeather(from:
+        NetworkManager.instance.get(from:
             RequestBuilder()
                 .setToken(token: OpenWeatherMapKit.token)
                 .setWeatherMode(mode: .current)
                 .setLatitude(lat: coord.latitude)
                 .setLongitude(lon: coord.longitude)
                 .build(),
-                       callback: callback)
+                                    callback: callback)
     }
-
+    
     /// Request current weather for provided city (by name and [optional] country code).
     ///
     /// - Parameters:
@@ -52,35 +52,14 @@ class OpenWeatherMapKit {
     func currentWeather(forCity city: String,
                         withCountryCode countryCode: String? = nil,
                         callback: @escaping (WeatherItem?, Error?) -> ()) {
-        requestWeather(from:
+        NetworkManager.instance.get(from:
             RequestBuilder()
                 .setToken(token: OpenWeatherMapKit.token)
                 .setWeatherMode(mode: .current)
                 .setCity(city: city)
                 .setCountryCode(code: countryCode)
                 .build(),
-                       callback: callback)
-    }
-
-    private func requestWeather(from url: String,
-                                callback: @escaping (WeatherItem?, Error?) -> ()) {
-        // TODO: fix force unwrap here
-        URLSession.shared.dataTask(with: URL(string: url)!) { (data, response, error) in
-            if let error = error {
-                callback(nil, error)
-            }
-            guard let data = data else { return }
-            let jsonData = try? JSONSerialization.jsonObject(with: data, options: .mutableContainers) as! NSDictionary
-            if let jsonData = jsonData {
-                let weatherStats = jsonData["main"] as! NSDictionary
-                let t = weatherStats["temp"] as! Double
-                let tMax = weatherStats["temp_max"] as! Double
-                let tMin = weatherStats["temp_min"] as! Double
-                callback(WeatherItem(currentTemp: t,
-                                     maxTemp: tMax,
-                                     minTemp: tMin), nil)
-            }
-            }.resume()
+                                    callback: callback)
     }
 
 }
