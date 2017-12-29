@@ -41,7 +41,7 @@ OpenWeatherMapKit.instance.currentWeather(forCoordiante: (latitude: 53.2610313, 
 ```
 
 ##### 🌤 WeatherItem
-All operations for getting current weather data returns special object of `WeatherItem` type. `WeatherItem` is a simple struct that contains temperature data on the board. Here are fields you can access on it:
+All operations for getting current weather data return special object of `WeatherItem` type. `WeatherItem` is a simple struct that contains temperature data on the board. Here are fields you can access on it:
 ```swift
 let currentTemp: Double
 let maxTemp: Double
