@@ -12,7 +12,8 @@ internal final class NetworkManager {
 
     internal static let instance = NetworkManager()
 
-    private init() {}
+    private init() {
+    }
 
     // TODO: network manager knows about WeatherItems? bad... refactor that!
     internal func get(from url: String,
@@ -22,17 +23,18 @@ internal final class NetworkManager {
             if let error = error {
                 callback(nil, error)
             }
-            guard let data = data else { return }
-            let jsonData = try? JSONSerialization.jsonObject(with: data, options: .mutableContainers) as! NSDictionary
-            if let jsonData = jsonData {
-                let weatherStats = jsonData["main"] as! NSDictionary
-                let t = weatherStats["temp"] as! Double
-                let tMax = weatherStats["temp_max"] as! Double
-                let tMin = weatherStats["temp_min"] as! Double
-                callback(WeatherItem(currentTemp: t,
-                                     maxTemp: tMax,
-                                     minTemp: tMin), nil)
+            guard let data = data else {
+                return
             }
-            }.resume()
+
+            let weatherItem = EntityConverterFactory.makeConverter(for: .weatherItem).convert(entity: data)
+
+            guard let item = weatherItem as? WeatherItem else {
+                return
+            }
+
+            callback(item, nil)
+
+        }.resume()
     }
 }

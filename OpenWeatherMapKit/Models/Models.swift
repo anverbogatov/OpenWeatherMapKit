@@ -8,8 +8,12 @@
 
 import Foundation
 
-struct WeatherItem {
-    
+protocol BasicItem {
+
+}
+
+struct WeatherItem: BasicItem {
+
     let currentTemp: Double
     let maxTemp: Double
     let minTemp: Double
@@ -23,10 +27,10 @@ struct WeatherItem {
     }
 }
 
-extension WeatherItem : CustomStringConvertible {
+extension WeatherItem: CustomStringConvertible {
 
     var description: String {
         return "WeatherItem(current=\(self.currentTemp), max=\(self.maxTemp), min=\(self.minTemp))"
     }
-    
+
 }

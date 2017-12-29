@@ -8,6 +8,7 @@
 
 /* Begin PBXBuildFile section */
 		876623921FF5EAD1003F1867 /* NetworkManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 876623911FF5EAD1003F1867 /* NetworkManager.swift */; };
+		876623951FF5EBDD003F1867 /* EntityConverters.swift in Sources */ = {isa = PBXBuildFile; fileRef = 876623941FF5EBDD003F1867 /* EntityConverters.swift */; };
 		876DB5621FF4986C00823C2E /* RequestBuilderTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 876DB5611FF4986C00823C2E /* RequestBuilderTests.swift */; };
 		87B862D11FF2ADCD00E9E38D /* Constants.swift in Sources */ = {isa = PBXBuildFile; fileRef = 87B862D01FF2ADCD00E9E38D /* Constants.swift */; };
 		87B862D31FF2B1EA00E9E38D /* RequestBuilder.swift in Sources */ = {isa = PBXBuildFile; fileRef = 87B862D21FF2B1EA00E9E38D /* RequestBuilder.swift */; };
@@ -30,6 +31,7 @@
 
 /* Begin PBXFileReference section */
 		876623911FF5EAD1003F1867 /* NetworkManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NetworkManager.swift; sourceTree = "<group>"; };
+		876623941FF5EBDD003F1867 /* EntityConverters.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EntityConverters.swift; sourceTree = "<group>"; };
 		876DB5611FF4986C00823C2E /* RequestBuilderTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RequestBuilderTests.swift; sourceTree = "<group>"; };
 		87B862D01FF2ADCD00E9E38D /* Constants.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Constants.swift; sourceTree = "<group>"; };
 		87B862D21FF2B1EA00E9E38D /* RequestBuilder.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RequestBuilder.swift; sourceTree = "<group>"; };
@@ -68,6 +70,14 @@
 				876623911FF5EAD1003F1867 /* NetworkManager.swift */,
 			);
 			path = Networking;
+			sourceTree = "<group>";
+		};
+		876623931FF5EBBC003F1867 /* Converters */ = {
+			isa = PBXGroup;
+			children = (
+				876623941FF5EBDD003F1867 /* EntityConverters.swift */,
+			);
+			path = Converters;
 			sourceTree = "<group>";
 		};
 		876DB55F1FF4976700823C2E /* Integration Tests */ = {
@@ -146,6 +156,7 @@
 				87B862D41FF3463900E9E38D /* Supporting Files */,
 				876623901FF5EABF003F1867 /* Networking */,
 				87B862D71FF3467200E9E38D /* Builders */,
+				876623931FF5EBBC003F1867 /* Converters */,
 			);
 			path = OpenWeatherMapKit;
 			sourceTree = "<group>";
@@ -272,6 +283,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				87EA0AD71FECB3D200E3EEEA /* OpenWeatherMapKit.swift in Sources */,
+				876623951FF5EBDD003F1867 /* EntityConverters.swift in Sources */,
 				87EA0AD91FECB6E200E3EEEA /* Models.swift in Sources */,
 				876623921FF5EAD1003F1867 /* NetworkManager.swift in Sources */,
 				87B862D11FF2ADCD00E9E38D /* Constants.swift in Sources */,
