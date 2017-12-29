@@ -22,22 +22,22 @@ Use `OpenWeatherMapKit` class to retrieve weather data. It is a singleton and ac
 You can retrieve weather data for specific city by it's name:
 ```swift
 OpenWeatherMapKit.instance.currentWeather(forCity: "Samara") { (weatherItem, error) in
-            ...
-        }
+    ...
+}
 ```
 or event by city name and country code:
 ```swift
 OpenWeatherMapKit.instance.currentWeather(forCity: "Samara", withCountryCode: "ru") { (weatherItem, error) in
-            ...
-        }
+    ...
+}
 ```
 
 ##### 🌍 Get weather by geo coordinates
 You can retrieve weather data for specific geo location by it's coordinates:
 ```swift
 OpenWeatherMapKit.instance.currentWeather(forCoordiante: (latitude: 53.2610313, longitude: 50.0579958)) { (weatherItem, error) in
-            ...
-        }
+    ...
+}
 ```
 
 ##### 🌤 WeatherItem
