@@ -7,6 +7,8 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		431A4962BD515BF3503248A3 /* EntityConverterFactoryTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 431A413D59E5CB4A783A0E3B /* EntityConverterFactoryTests.swift */; };
+		431A499AA20BA8E17A94A292 /* NopConverterTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 431A4538B6E132E5AF328413 /* NopConverterTests.swift */; };
 		876623921FF5EAD1003F1867 /* NetworkManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 876623911FF5EAD1003F1867 /* NetworkManager.swift */; };
 		876623951FF5EBDD003F1867 /* EntityConverters.swift in Sources */ = {isa = PBXBuildFile; fileRef = 876623941FF5EBDD003F1867 /* EntityConverters.swift */; };
 		876DB5621FF4986C00823C2E /* RequestBuilderTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 876DB5611FF4986C00823C2E /* RequestBuilderTests.swift */; };
@@ -30,6 +32,8 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		431A413D59E5CB4A783A0E3B /* EntityConverterFactoryTests.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = EntityConverterFactoryTests.swift; sourceTree = "<group>"; };
+		431A4538B6E132E5AF328413 /* NopConverterTests.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = NopConverterTests.swift; sourceTree = "<group>"; };
 		876623911FF5EAD1003F1867 /* NetworkManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NetworkManager.swift; sourceTree = "<group>"; };
 		876623941FF5EBDD003F1867 /* EntityConverters.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EntityConverters.swift; sourceTree = "<group>"; };
 		876DB5611FF4986C00823C2E /* RequestBuilderTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RequestBuilderTests.swift; sourceTree = "<group>"; };
@@ -92,6 +96,8 @@
 			isa = PBXGroup;
 			children = (
 				876DB5611FF4986C00823C2E /* RequestBuilderTests.swift */,
+				431A413D59E5CB4A783A0E3B /* EntityConverterFactoryTests.swift */,
+				431A4538B6E132E5AF328413 /* NopConverterTests.swift */,
 			);
 			path = "Unit Tests";
 			sourceTree = "<group>";
@@ -297,6 +303,8 @@
 			files = (
 				87EA0ACB1FECB12800E3EEEA /* OpenWeatherMapKitITTests.swift in Sources */,
 				876DB5621FF4986C00823C2E /* RequestBuilderTests.swift in Sources */,
+				431A4962BD515BF3503248A3 /* EntityConverterFactoryTests.swift in Sources */,
+				431A499AA20BA8E17A94A292 /* NopConverterTests.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

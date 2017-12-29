@@ -9,7 +9,7 @@
 import Foundation
 
 internal enum SupportedType {
-    case weatherItem
+    case weatherForceast, weatherItem
 }
 
 internal protocol EntityConverter {
@@ -43,7 +43,7 @@ internal class WeatherItemConverter: EntityConverter {
 internal final class NopConverter: EntityConverter {
 
     func convert(entity: Data) -> BasicItem? {
-        fatalError("convert(entity:) has not been implemented in NOP")
+        return nil
     }
 
 }
