@@ -18,7 +18,7 @@ You can use following method to initialize OpenWeatherMapKit. Just replace `[YOU
 #### Usage
 Use `OpenWeatherMapKit` class to retrieve weather data. It is a singleton and access to it's instance can be done through `instance` variable.
 
-##### Get weather by City
+##### 🌇 Get weather by City
 You can retrieve weather data for specific city by it's name:
 ```swift
 OpenWeatherMapKit.instance.currentWeather(forCity: "Samara") { (weatherItem, error) in
@@ -32,7 +32,7 @@ OpenWeatherMapKit.instance.currentWeather(forCity: "Samara", withCountryCode: "r
         }
 ```
 
-##### Get weather by geo coordinates
+##### 🌍 Get weather by geo coordinates
 You can retrieve weather data for specific geo location by it's coordinates:
 ```swift
 OpenWeatherMapKit.instance.currentWeather(forCoordiante: (latitude: 53.2610313, longitude: 50.0579958)) { (weatherItem, error) in
@@ -40,7 +40,7 @@ OpenWeatherMapKit.instance.currentWeather(forCoordiante: (latitude: 53.2610313, 
         }
 ```
 
-##### WeatherItem
+##### 🌤 WeatherItem
 All operations for getting current weather data returns special object of `WeatherItem` type. `WeatherItem` is a simple struct that contains temperature data on the board. Here are fields you can access on it:
 ```swift
 let currentTemp: Double
