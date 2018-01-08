@@ -29,7 +29,7 @@ public struct WeatherItem: BasicItem {
 
 extension WeatherItem: CustomStringConvertible {
 
-    var description: String {
+    public var description: String {
         return "WeatherItem(current=\(self.currentTemp), max=\(self.maxTemp), min=\(self.minTemp))"
     }
 
