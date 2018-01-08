@@ -8,7 +8,7 @@
 
 import Foundation
 
-class OpenWeatherMapKit {
+public class OpenWeatherMapKit {
 
     /// API token that should be set during initialization
     private static var token: String?
@@ -17,12 +17,13 @@ class OpenWeatherMapKit {
     static let instance = OpenWeatherMapKit()
 
     /// Private initializer. Must not be invoked from outside
-    private init() {}
+    private init() {
+    }
 
     /// Initialize main framework class with OpenWeatherMap service's API token.
     ///
     /// - Parameter token: API key that should be retrieved from https://openweathermap.org
-    class func initialize(withAppId token: String) {
+    public class func initialize(withAppId token: String) {
         self.token = token
     }
 
@@ -31,35 +32,35 @@ class OpenWeatherMapKit {
     /// - Parameters:
     ///   - coord: geo coordinate as a tuple with $0=latitude and $1=longitude
     ///   - callback: closure that will be invoked as the result of API call
-    func currentWeather(forCoordiante coord: (latitude: Double, longitude: Double),
-                        callback: @escaping (WeatherItem?, Error?) -> ()) {
+    public func currentWeather(forCoordiante coord: (latitude: Double, longitude: Double),
+                               callback: @escaping (WeatherItem?, Error?) -> ()) {
         NetworkManager.instance.get(from:
-            RequestBuilder()
+        RequestBuilder()
                 .setToken(token: OpenWeatherMapKit.token)
                 .setWeatherMode(mode: .current)
                 .setLatitude(lat: coord.latitude)
                 .setLongitude(lon: coord.longitude)
                 .build(),
-                                    callback: callback)
+                callback: callback)
     }
-    
+
     /// Request current weather for provided city (by name and [optional] country code).
     ///
     /// - Parameters:
     ///   - city: name of the city
     ///   - countryCode: optional geo code of the country
     ///   - callback: closure that will be invoked as the result of API call
-    func currentWeather(forCity city: String,
-                        withCountryCode countryCode: String? = nil,
-                        callback: @escaping (WeatherItem?, Error?) -> ()) {
+    public func currentWeather(forCity city: String,
+                               withCountryCode countryCode: String? = nil,
+                               callback: @escaping (WeatherItem?, Error?) -> ()) {
         NetworkManager.instance.get(from:
-            RequestBuilder()
+        RequestBuilder()
                 .setToken(token: OpenWeatherMapKit.token)
                 .setWeatherMode(mode: .current)
                 .setCity(city: city)
                 .setCountryCode(code: countryCode)
                 .build(),
-                                    callback: callback)
+                callback: callback)
     }
 
 }

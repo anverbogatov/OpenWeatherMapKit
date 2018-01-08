@@ -12,7 +12,7 @@ protocol BasicItem {
 
 }
 
-struct WeatherItem: BasicItem {
+public struct WeatherItem: BasicItem {
 
     let currentTemp: Double
     let maxTemp: Double
