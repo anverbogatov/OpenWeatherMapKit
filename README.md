@@ -63,3 +63,12 @@ let maxTemp: Double
 let minTemp: Double
 ```
 ⚠️ Temperature data provided in Kelvin. It is the only option available at the moment, but this will be changed in the future.
+
+## Roadmap
+Please find project's roadmap below:
+
+| Version | ETA | Feature |
+| ------- | --- | ------- |
+| v0.1    | January 2018 | Current weather forecast by city & geo coordinates + support of different units (Celsius, Kelvin, Fahrenheit) |
+| v0.2 | February 2018 | Weather forecast for 5 days / 3 hour by city & geo coordinates. |
+| v0.3 | | 16 day daily forecast by city & geo coordinates. |
