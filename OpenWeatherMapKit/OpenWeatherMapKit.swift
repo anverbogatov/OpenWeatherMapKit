@@ -14,7 +14,7 @@ public class OpenWeatherMapKit {
     private static var token: String?
 
     /// Main kit's instance.
-    static let instance = OpenWeatherMapKit()
+    public static let instance = OpenWeatherMapKit()
 
     /// Private initializer. Must not be invoked from outside
     private init() {
