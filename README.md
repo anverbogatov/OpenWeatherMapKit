@@ -10,7 +10,7 @@ OpenWeatherMapKit is a small and simple framework written in Swift that gives yo
 
 ## How to install:
 
-#### Cocoapods
+#### 🥥 Cocoapods
 Just add following line to your Podfile:
 ```ruby
 pod 'OpenWeatherMapKit'
@@ -64,7 +64,7 @@ let minTemp: Double
 ```
 ⚠️ Temperature data provided in Kelvin. It is the only option available at the moment, but this will be changed in the future.
 
-## Roadmap
+## 🛣 Roadmap
 Please find project's roadmap below:
 
 | Version | ETA | Feature |
