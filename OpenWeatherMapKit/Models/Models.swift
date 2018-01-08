@@ -14,9 +14,9 @@ protocol BasicItem {
 
 public struct WeatherItem: BasicItem {
 
-    let currentTemp: Double
-    let maxTemp: Double
-    let minTemp: Double
+    public let currentTemp: Double
+    public let maxTemp: Double
+    public let minTemp: Double
 
     init(currentTemp: Double,
          maxTemp: Double,
