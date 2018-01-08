@@ -12,7 +12,7 @@ Just add following line to your Podfile:
 ```ruby
 pod 'OpenWeatherMapKit'
 ```
-and do not forget to run:
+and run following command in your Terminal from project's root folder:
 ```shell
 pod update
 ```
