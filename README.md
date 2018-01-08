@@ -5,6 +5,18 @@
 # OpenWeatherMapKit
 OpenWeatherMapKit is a small and simple framework written in Swift that gives you access to all features of the OpenWeatherMap service's APIs right in your iOS / macOS / watchOS/ tvOS application.
 
+## How to install:
+
+#### Cocoapods
+Just add following line to your Podfile:
+```ruby
+pod 'OpenWeatherMapKit'
+```
+and do not forget to run:
+```shell
+pod update
+```
+
 ## How to use:
 
 #### Prerequisites
