@@ -21,6 +21,9 @@
 		87EA0AD91FECB6E200E3EEEA /* Models.swift in Sources */ = {isa = PBXBuildFile; fileRef = 87EA0AD81FECB6E200E3EEEA /* Models.swift */; };
 		87F699342020307B00921882 /* WeatherItemCalculationTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 87F699332020307B00921882 /* WeatherItemCalculationTests.swift */; };
 		87F699372020331800921882 /* Functions.swift in Sources */ = {isa = PBXBuildFile; fileRef = 87F699362020331800921882 /* Functions.swift */; };
+		87F6993B2020356B00921882 /* LICENSE in Resources */ = {isa = PBXBuildFile; fileRef = 87F699382020356A00921882 /* LICENSE */; };
+		87F6993C2020356B00921882 /* README.md in Resources */ = {isa = PBXBuildFile; fileRef = 87F699392020356A00921882 /* README.md */; };
+		87F6993D2020356B00921882 /* OpenWeatherMapKit.podspec in Resources */ = {isa = PBXBuildFile; fileRef = 87F6993A2020356A00921882 /* OpenWeatherMapKit.podspec */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -51,6 +54,9 @@
 		87EA0AD81FECB6E200E3EEEA /* Models.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Models.swift; sourceTree = "<group>"; };
 		87F699332020307B00921882 /* WeatherItemCalculationTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WeatherItemCalculationTests.swift; sourceTree = "<group>"; };
 		87F699362020331800921882 /* Functions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Functions.swift; sourceTree = "<group>"; };
+		87F699382020356A00921882 /* LICENSE */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = LICENSE; sourceTree = SOURCE_ROOT; };
+		87F699392020356A00921882 /* README.md */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = net.daringfireball.markdown; path = README.md; sourceTree = SOURCE_ROOT; };
+		87F6993A2020356A00921882 /* OpenWeatherMapKit.podspec */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = OpenWeatherMapKit.podspec; sourceTree = SOURCE_ROOT; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -110,6 +116,9 @@
 		87B862D41FF3463900E9E38D /* Supporting Files */ = {
 			isa = PBXGroup;
 			children = (
+				87F699382020356A00921882 /* LICENSE */,
+				87F6993A2020356A00921882 /* OpenWeatherMapKit.podspec */,
+				87F699392020356A00921882 /* README.md */,
 				87EA0ABF1FECB12800E3EEEA /* OpenWeatherMapKit.h */,
 				87EA0AC01FECB12800E3EEEA /* Info.plist */,
 			);
@@ -161,14 +170,14 @@
 		87EA0ABE1FECB12800E3EEEA /* OpenWeatherMapKit */ = {
 			isa = PBXGroup;
 			children = (
-				87F699352020330B00921882 /* Functions */,
 				87EA0AD61FECB3D200E3EEEA /* OpenWeatherMapKit.swift */,
-				87B862D61FF3465C00E9E38D /* Constants */,
-				87B862D51FF3464900E9E38D /* Models */,
-				87B862D41FF3463900E9E38D /* Supporting Files */,
-				876623901FF5EABF003F1867 /* Networking */,
 				87B862D71FF3467200E9E38D /* Builders */,
+				87B862D61FF3465C00E9E38D /* Constants */,
 				876623931FF5EBBC003F1867 /* Converters */,
+				87F699352020330B00921882 /* Functions */,
+				87B862D51FF3464900E9E38D /* Models */,
+				876623901FF5EABF003F1867 /* Networking */,
+				87B862D41FF3463900E9E38D /* Supporting Files */,
 			);
 			path = OpenWeatherMapKit;
 			sourceTree = "<group>";
@@ -285,6 +294,9 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				87F6993C2020356B00921882 /* README.md in Resources */,
+				87F6993D2020356B00921882 /* OpenWeatherMapKit.podspec in Resources */,
+				87F6993B2020356B00921882 /* LICENSE in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
