@@ -24,7 +24,6 @@ class OpenWeatherMapKitITTests: XCTestCase {
         group.enter()
 
         OpenWeatherMapKit.instance.currentWeather(forCity: "Samara") { (weatherItem, error) in
-            //        OpenWeatherMapKit.instance.currentWeather(forCity: "Samara", withCountryCode: "ru") { (weatherItem, error) in
             result = weatherItem
             caughtError = error
             group.leave()
