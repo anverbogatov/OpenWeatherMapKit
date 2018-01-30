@@ -58,18 +58,24 @@ OpenWeatherMapKit.instance.currentWeather(forCoordiante: (latitude: 53.2610313, 
 ##### 🌤 WeatherItem
 All operations for getting current weather data return special object of `WeatherItem` type. `WeatherItem` is a simple struct that contains temperature data on the board. Here are fields you can access on it:
 ```swift
-let currentTemp: Double
-let maxTemp: Double
-let minTemp: Double
+/// Weather item's temperature values in Kelvin
+public let kelvin: (currentTemp: Double, maxTemp: Double, minTemp: Double)
+/// Weather item's temperature values in Celsius
+public let celsius: (currentTemp: Double, maxTemp: Double, minTemp: Double)
+/// Weather item's temperature values in Fahrenheit
+public let fahrenheit: (currentTemp: Double, maxTemp: Double, minTemp: Double)
 ```
-⚠️ Temperature data provided in Kelvin.
+For example, if you want to get information on current weather in celsius you achieve that using following statement:
+```swift
+weatherItem.celsius.currentTemp
+```
 
 ## 🛣 Roadmap
 Please find project's roadmap below:
 
 | Version | ETA | Feature |
 | ------- | --- | ------- |
-| v0.1    | January 2018 | Current weather forecast by city & geo coordinates + support of different units (Celsius, Kelvin, Fahrenheit) |
+| ✅ v0.1    | January 2018 | Current weather forecast by city & geo coordinates + support of different units (Celsius, Kelvin, Fahrenheit) |
 | v0.2 | February 2018 | Weather forecast for 5 days / 3 hour by city & geo coordinates. |
 | v0.3 | | 16 day daily forecast by city & geo coordinates. |
 
