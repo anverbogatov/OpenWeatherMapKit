@@ -22,6 +22,7 @@ internal class WeatherItemConverter: EntityConverter {
 
     func convert(entity: Data) -> BasicItem? {
 
+        // TODO: Reimplement with Codable
         let jsonData = try? JSONSerialization.jsonObject(with: entity, options: .mutableContainers) as! NSDictionary
         var result: WeatherItem?
 

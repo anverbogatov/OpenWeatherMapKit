@@ -10,6 +10,7 @@ import Foundation
 
 enum WeatherMode {
     case current
+    case fiveDays
 }
 
 // TODO: add parameters validation
@@ -64,7 +65,10 @@ internal class RequestBuilder {
         // TODO: add configuration validation
         // TODO: cover by unit test
 
-        if weatherMode == .current {
+        switch weatherMode {
+        case .fiveDays:
+            serviceUrl += "/forecast?"
+        default:
             serviceUrl += "/weather?"
         }
 

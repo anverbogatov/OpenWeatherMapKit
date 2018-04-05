@@ -20,7 +20,7 @@ class OpenWeatherMapKitITTests: XCTestCase {
         var result: WeatherItem?
         var caughtError: Error?
 
-        let group = DispatchGroup()
+        let group = DispatchGroup() // TODO: Reimplement with expectations
         group.enter()
 
         OpenWeatherMapKit.instance.currentWeather(forCity: "Samara") { (weatherItem, error) in
@@ -68,6 +68,24 @@ class OpenWeatherMapKitITTests: XCTestCase {
         }
 
         group.wait()
+
+        XCTAssertNotNil(result)
+        XCTAssertNil(caughtError)
+    }
+
+    func test_5_days_weather_forCity() {
+        var result: WeatherItem?
+        var caughtError: Error?
+
+        let ex = expectation(description: "5 days weather forecast")
+
+        OpenWeatherMapKit.instance.weatherOnFiveDays(forCity: "Samara") { (weatherItem, error) in
+            result = weatherItem
+            caughtError = error
+            ex.fulfill()
+        }
+
+        wait(for: [ex], timeout: 5.0)
 
         XCTAssertNotNil(result)
         XCTAssertNil(caughtError)
