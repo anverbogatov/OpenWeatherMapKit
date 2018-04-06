@@ -8,11 +8,6 @@
 
 import Foundation
 
-enum WeatherMode {
-    case current
-    case fiveDays
-}
-
 // TODO: add parameters validation
 
 internal class RequestBuilder {

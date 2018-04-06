@@ -14,6 +14,7 @@
 		87A9E4CA20778FFD00855405 /* ForecastItemsList.swift in Sources */ = {isa = PBXBuildFile; fileRef = 87A9E4C920778FFD00855405 /* ForecastItemsList.swift */; };
 		87A9E4CC2077901A00855405 /* ForecastItem.swift in Sources */ = {isa = PBXBuildFile; fileRef = 87A9E4CB2077901A00855405 /* ForecastItem.swift */; };
 		87A9E4CE2077903700855405 /* WeatherDescriptor.swift in Sources */ = {isa = PBXBuildFile; fileRef = 87A9E4CD2077903700855405 /* WeatherDescriptor.swift */; };
+		87A9E4D02077940D00855405 /* WeatherMode.swift in Sources */ = {isa = PBXBuildFile; fileRef = 87A9E4CF2077940D00855405 /* WeatherMode.swift */; };
 		87B862D11FF2ADCD00E9E38D /* Constants.swift in Sources */ = {isa = PBXBuildFile; fileRef = 87B862D01FF2ADCD00E9E38D /* Constants.swift */; };
 		87B862D31FF2B1EA00E9E38D /* RequestBuilder.swift in Sources */ = {isa = PBXBuildFile; fileRef = 87B862D21FF2B1EA00E9E38D /* RequestBuilder.swift */; };
 		87EA0AC61FECB12800E3EEEA /* OpenWeatherMapKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 87EA0ABC1FECB12800E3EEEA /* OpenWeatherMapKit.framework */; };
@@ -45,6 +46,7 @@
 		87A9E4C920778FFD00855405 /* ForecastItemsList.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ForecastItemsList.swift; sourceTree = "<group>"; };
 		87A9E4CB2077901A00855405 /* ForecastItem.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ForecastItem.swift; sourceTree = "<group>"; };
 		87A9E4CD2077903700855405 /* WeatherDescriptor.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WeatherDescriptor.swift; sourceTree = "<group>"; };
+		87A9E4CF2077940D00855405 /* WeatherMode.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WeatherMode.swift; sourceTree = "<group>"; };
 		87B862D01FF2ADCD00E9E38D /* Constants.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Constants.swift; sourceTree = "<group>"; };
 		87B862D21FF2B1EA00E9E38D /* RequestBuilder.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RequestBuilder.swift; sourceTree = "<group>"; };
 		87EA0ABC1FECB12800E3EEEA /* OpenWeatherMapKit.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = OpenWeatherMapKit.framework; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -141,6 +143,7 @@
 			isa = PBXGroup;
 			children = (
 				87B862D21FF2B1EA00E9E38D /* RequestBuilder.swift */,
+				87A9E4CF2077940D00855405 /* WeatherMode.swift */,
 			);
 			path = Builders;
 			sourceTree = "<group>";
@@ -318,6 +321,7 @@
 				87B862D11FF2ADCD00E9E38D /* Constants.swift in Sources */,
 				87B862D31FF2B1EA00E9E38D /* RequestBuilder.swift in Sources */,
 				8784A3A62076505900340A7E /* Wind.swift in Sources */,
+				87A9E4D02077940D00855405 /* WeatherMode.swift in Sources */,
 				87A9E4CA20778FFD00855405 /* ForecastItemsList.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
