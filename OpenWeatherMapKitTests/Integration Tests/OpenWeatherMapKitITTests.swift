@@ -79,7 +79,7 @@ class OpenWeatherMapKitITTests: XCTestCase {
 
         let ex = expectation(description: "5 days weather forecast")
 
-        OpenWeatherMapKit.instance.weatherOnFiveDays(forCity: "Samara") { (weatherItem, error) in
+        OpenWeatherMapKit.instance.weatherForecastForFiveDays(forCity: "Samara") { (weatherItem, error) in
             result = weatherItem
             caughtError = error
             ex.fulfill()
@@ -97,7 +97,7 @@ class OpenWeatherMapKitITTests: XCTestCase {
 
         let ex = expectation(description: "5 days weather forecast")
 
-        OpenWeatherMapKit.instance.weatherOnFiveDays(forCity: "Samara", withCountryCode: "ru") { (weatherItem, error) in
+        OpenWeatherMapKit.instance.weatherForecastForFiveDays(forCity: "Samara", withCountryCode: "ru") { (weatherItem, error) in
             result = weatherItem
             caughtError = error
             ex.fulfill()
@@ -115,7 +115,7 @@ class OpenWeatherMapKitITTests: XCTestCase {
 
         let ex = expectation(description: "5 days weather forecast")
 
-        OpenWeatherMapKit.instance.weatherOnFiveDays(forCoordiante: (latitude: 53.2610313, longitude: 50.0579958)) { (weatherItem, error) in
+        OpenWeatherMapKit.instance.weatherForecastForFiveDays(forCoordiante: (latitude: 53.2610313, longitude: 50.0579958)) { (weatherItem, error) in
             result = weatherItem
             caughtError = error
             ex.fulfill()

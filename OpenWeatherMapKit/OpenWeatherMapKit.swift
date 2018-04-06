@@ -70,8 +70,8 @@ public class OpenWeatherMapKit {
     /// - Parameters:
     ///   - coord: geo coordinate as a tuple with $0=latitude and $1=longitude
     ///   - callback: closure that will be invoked as the result of API call
-    public func weatherOnFiveDays(forCoordiante coord: (latitude: Double, longitude: Double),
-                                  callback: @escaping (ForecastItemsList?, Error?) -> ()) {
+    public func weatherForecastForFiveDays(forCoordiante coord: (latitude: Double, longitude: Double),
+                                           callback: @escaping (ForecastItemsList?, Error?) -> ()) {
         NetworkManager.instance.get(from:
             RequestBuilder()
                 .setToken(token: OpenWeatherMapKit.token)
@@ -88,9 +88,9 @@ public class OpenWeatherMapKit {
     ///   - city: name of the city
     ///   - countryCode: optional geo code of the country
     ///   - callback: closure that will be invoked as the result of API call
-    public func weatherOnFiveDays(forCity city: String,
-                                  withCountryCode countryCode: String? = nil,
-                                  callback: @escaping (ForecastItemsList?, Error?) -> ()) {
+    public func weatherForecastForFiveDays(forCity city: String,
+                                           withCountryCode countryCode: String? = nil,
+                                           callback: @escaping (ForecastItemsList?, Error?) -> ()) {
         NetworkManager.instance.get(from:
             RequestBuilder()
                 .setToken(token: OpenWeatherMapKit.token)
