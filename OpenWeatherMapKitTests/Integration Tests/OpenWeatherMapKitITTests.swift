@@ -17,7 +17,7 @@ class OpenWeatherMapKitITTests: XCTestCase {
     }
     
     func test_currentWeather_forCity() {
-        var result: WeatherItem?
+        var result: SingleWeatherItem?
         var caughtError: Error?
 
         let group = DispatchGroup() // TODO: Reimplement with expectations
@@ -36,7 +36,7 @@ class OpenWeatherMapKitITTests: XCTestCase {
     }
 
     func test_currentWeather_forCityWithCountryCode() {
-        var result: WeatherItem?
+        var result: SingleWeatherItem?
         var caughtError: Error?
 
         let group = DispatchGroup()
@@ -55,7 +55,7 @@ class OpenWeatherMapKitITTests: XCTestCase {
     }
 
     func test_currentWeather_forGeoCoordinate() {
-        var result: WeatherItem?
+        var result: SingleWeatherItem?
         var caughtError: Error?
 
         let group = DispatchGroup()
@@ -74,7 +74,7 @@ class OpenWeatherMapKitITTests: XCTestCase {
     }
 
     func test_5_days_weather_forCity() {
-        var result: WeatherItem?
+        var result: FiveDaysForecast?
         var caughtError: Error?
 
         let ex = expectation(description: "5 days weather forecast")
@@ -90,5 +90,5 @@ class OpenWeatherMapKitITTests: XCTestCase {
         XCTAssertNotNil(result)
         XCTAssertNil(caughtError)
     }
-    
+
 }

@@ -33,7 +33,7 @@ public class OpenWeatherMapKit {
     ///   - coord: geo coordinate as a tuple with $0=latitude and $1=longitude
     ///   - callback: closure that will be invoked as the result of API call
     public func currentWeather(forCoordiante coord: (latitude: Double, longitude: Double),
-                               callback: @escaping (WeatherItem?, Error?) -> ()) {
+                               callback: @escaping (SingleWeatherItem?, Error?) -> ()) {
         NetworkManager.instance.get(from:
             RequestBuilder()
                 .setToken(token: OpenWeatherMapKit.token)
@@ -52,7 +52,7 @@ public class OpenWeatherMapKit {
     ///   - callback: closure that will be invoked as the result of API call
     public func currentWeather(forCity city: String,
                                withCountryCode countryCode: String? = nil,
-                               callback: @escaping (WeatherItem?, Error?) -> ()) {
+                               callback: @escaping (SingleWeatherItem?, Error?) -> ()) {
         NetworkManager.instance.get(from:
             RequestBuilder()
                 .setToken(token: OpenWeatherMapKit.token)
@@ -69,7 +69,7 @@ public class OpenWeatherMapKit {
     ///   - coord: geo coordinate as a tuple with $0=latitude and $1=longitude
     ///   - callback: closure that will be invoked as the result of API call
     public func weatherOnFiveDays(forCoordiante coord: (latitude: Double, longitude: Double),
-                                  callback: @escaping (WeatherItem?, Error?) -> ()) {
+                                  callback: @escaping (FiveDaysForecast?, Error?) -> ()) {
         NetworkManager.instance.get(from:
             RequestBuilder()
                 .setToken(token: OpenWeatherMapKit.token)
@@ -88,7 +88,7 @@ public class OpenWeatherMapKit {
     ///   - callback: closure that will be invoked as the result of API call
     public func weatherOnFiveDays(forCity city: String,
                                   withCountryCode countryCode: String? = nil,
-                                  callback: @escaping (WeatherItem?, Error?) -> ()) {
+                                  callback: @escaping (FiveDaysForecast?, Error?) -> ()) {
         NetworkManager.instance.get(from:
             RequestBuilder()
                 .setToken(token: OpenWeatherMapKit.token)

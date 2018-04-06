@@ -15,26 +15,22 @@ internal final class NetworkManager {
     private init() {
     }
 
-    // TODO: network manager knows about WeatherItems? bad... refactor that!
-    internal func get(from url: String,
-                      callback: @escaping (WeatherItem?, Error?) -> ()) {
-        // TODO: fix force unwrap here
-        URLSession.shared.dataTask(with: URL(string: url)!) { (data, response, error) in
+    internal func get<T : Codable>(from url: String,
+                                   callback: @escaping (T?, Error?) -> ()) {
+        guard let serviceUrl = URL(string: url) else { return }
+        URLSession.shared.dataTask(with: serviceUrl) { (data, response, error) in
             if let error = error {
                 callback(nil, error)
             }
-            guard let data = data else {
-                return
+            guard let data = data else { return }
+
+            let decoder = JSONDecoder() // TODO: move decoding to othe place (dispatcher, for example)
+            do {
+                let result = try decoder.decode(T.self, from: data)
+                callback(result, nil)
+            } catch {
+                callback(nil, error)
             }
-
-            let weatherItem = EntityConverterFactory.makeConverter(for: .weatherItem).convert(entity: data)
-
-            guard let item = weatherItem as? WeatherItem else {
-                return
-            }
-
-            callback(item, nil)
-
-        }.resume()
+            }.resume()
     }
 }
