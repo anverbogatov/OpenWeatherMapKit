@@ -8,6 +8,8 @@
 
 import Foundation
 
+/// OpenWeatherMapKit main class. Use it for access weather data
+/// for any geo location you need.
 public class OpenWeatherMapKit {
 
     /// API token that should be set during initialization
@@ -33,7 +35,7 @@ public class OpenWeatherMapKit {
     ///   - coord: geo coordinate as a tuple with $0=latitude and $1=longitude
     ///   - callback: closure that will be invoked as the result of API call
     public func currentWeather(forCoordiante coord: (latitude: Double, longitude: Double),
-                               callback: @escaping (SingleWeatherItem?, Error?) -> ()) {
+                               callback: @escaping (ForecastItem?, Error?) -> ()) {
         NetworkManager.instance.get(from:
             RequestBuilder()
                 .setToken(token: OpenWeatherMapKit.token)
@@ -52,7 +54,7 @@ public class OpenWeatherMapKit {
     ///   - callback: closure that will be invoked as the result of API call
     public func currentWeather(forCity city: String,
                                withCountryCode countryCode: String? = nil,
-                               callback: @escaping (SingleWeatherItem?, Error?) -> ()) {
+                               callback: @escaping (ForecastItem?, Error?) -> ()) {
         NetworkManager.instance.get(from:
             RequestBuilder()
                 .setToken(token: OpenWeatherMapKit.token)
@@ -69,7 +71,7 @@ public class OpenWeatherMapKit {
     ///   - coord: geo coordinate as a tuple with $0=latitude and $1=longitude
     ///   - callback: closure that will be invoked as the result of API call
     public func weatherOnFiveDays(forCoordiante coord: (latitude: Double, longitude: Double),
-                                  callback: @escaping (FiveDaysForecast?, Error?) -> ()) {
+                                  callback: @escaping (ForecastItemsList?, Error?) -> ()) {
         NetworkManager.instance.get(from:
             RequestBuilder()
                 .setToken(token: OpenWeatherMapKit.token)
@@ -88,7 +90,7 @@ public class OpenWeatherMapKit {
     ///   - callback: closure that will be invoked as the result of API call
     public func weatherOnFiveDays(forCity city: String,
                                   withCountryCode countryCode: String? = nil,
-                                  callback: @escaping (FiveDaysForecast?, Error?) -> ()) {
+                                  callback: @escaping (ForecastItemsList?, Error?) -> ()) {
         NetworkManager.instance.get(from:
             RequestBuilder()
                 .setToken(token: OpenWeatherMapKit.token)
