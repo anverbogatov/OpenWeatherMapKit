@@ -24,6 +24,7 @@ class OpenWeatherMapKitITTests: XCTestCase {
         OpenWeatherMapKit.instance.currentWeather(forCity: "Samara") { (weatherItem, error) in
             result = weatherItem
             caughtError = error
+            ex.fulfill()
         }
 
         wait(for: [ex], timeout: 5.0)
