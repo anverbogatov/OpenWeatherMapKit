@@ -8,6 +8,8 @@
 
 import Foundation
 
+/// OpenWeatherMapKit main class. Use it for access weather data
+/// for any geo location you need.
 public class OpenWeatherMapKit {
 
     /// API token that should be set during initialization
@@ -33,15 +35,15 @@ public class OpenWeatherMapKit {
     ///   - coord: geo coordinate as a tuple with $0=latitude and $1=longitude
     ///   - callback: closure that will be invoked as the result of API call
     public func currentWeather(forCoordiante coord: (latitude: Double, longitude: Double),
-                               callback: @escaping (WeatherItem?, Error?) -> ()) {
+                               callback: @escaping (ForecastItem?, Error?) -> ()) {
         NetworkManager.instance.get(from:
-        RequestBuilder()
+            RequestBuilder()
                 .setToken(token: OpenWeatherMapKit.token)
                 .setWeatherMode(mode: .current)
                 .setLatitude(lat: coord.latitude)
                 .setLongitude(lon: coord.longitude)
                 .build(),
-                callback: callback)
+                                    callback: callback)
     }
 
     /// Request current weather for provided city (by name and [optional] country code).
@@ -52,15 +54,51 @@ public class OpenWeatherMapKit {
     ///   - callback: closure that will be invoked as the result of API call
     public func currentWeather(forCity city: String,
                                withCountryCode countryCode: String? = nil,
-                               callback: @escaping (WeatherItem?, Error?) -> ()) {
+                               callback: @escaping (ForecastItem?, Error?) -> ()) {
         NetworkManager.instance.get(from:
-        RequestBuilder()
+            RequestBuilder()
                 .setToken(token: OpenWeatherMapKit.token)
                 .setWeatherMode(mode: .current)
                 .setCity(city: city)
                 .setCountryCode(code: countryCode)
                 .build(),
-                callback: callback)
+                                    callback: callback)
+    }
+
+    /// Request weather forecast on next 5 days for provided geographical coordinate.
+    ///
+    /// - Parameters:
+    ///   - coord: geo coordinate as a tuple with $0=latitude and $1=longitude
+    ///   - callback: closure that will be invoked as the result of API call
+    public func weatherForecastForFiveDays(forCoordiante coord: (latitude: Double, longitude: Double),
+                                           callback: @escaping (ForecastItemsList?, Error?) -> ()) {
+        NetworkManager.instance.get(from:
+            RequestBuilder()
+                .setToken(token: OpenWeatherMapKit.token)
+                .setWeatherMode(mode: .fiveDays)
+                .setLatitude(lat: coord.latitude)
+                .setLongitude(lon: coord.longitude)
+                .build(),
+                                    callback: callback)
+    }
+
+    /// Request weather forecast on next 5 days for provided city (by name and [optional] country code).
+    ///
+    /// - Parameters:
+    ///   - city: name of the city
+    ///   - countryCode: optional geo code of the country
+    ///   - callback: closure that will be invoked as the result of API call
+    public func weatherForecastForFiveDays(forCity city: String,
+                                           withCountryCode countryCode: String? = nil,
+                                           callback: @escaping (ForecastItemsList?, Error?) -> ()) {
+        NetworkManager.instance.get(from:
+            RequestBuilder()
+                .setToken(token: OpenWeatherMapKit.token)
+                .setWeatherMode(mode: .fiveDays)
+                .setCity(city: city)
+                .setCountryCode(code: countryCode)
+                .build(),
+                                    callback: callback)
     }
 
 }

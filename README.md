@@ -36,13 +36,13 @@ Use `OpenWeatherMapKit` class to retrieve weather data. It is a singleton and ac
 ##### 🌇 Get weather by City
 You can retrieve weather data for specific city by it's name:
 ```swift
-OpenWeatherMapKit.instance.currentWeather(forCity: "Samara") { (weatherItem, error) in
+OpenWeatherMapKit.instance.currentWeather(forCity: "Samara") { (forecast, error) in
     ...
 }
 ```
 or event by city name and country code:
 ```swift
-OpenWeatherMapKit.instance.currentWeather(forCity: "Samara", withCountryCode: "ru") { (weatherItem, error) in
+OpenWeatherMapKit.instance.currentWeather(forCity: "Samara", withCountryCode: "ru") { (forecast, error) in
     ...
 }
 ```
@@ -50,8 +50,22 @@ OpenWeatherMapKit.instance.currentWeather(forCity: "Samara", withCountryCode: "r
 ##### 🌍 Get weather by geo coordinates
 You can retrieve weather data for specific geo location by it's coordinates:
 ```swift
-OpenWeatherMapKit.instance.currentWeather(forCoordiante: (latitude: 53.2610313, longitude: 50.0579958)) { (weatherItem, error) in
+OpenWeatherMapKit.instance.currentWeather(forCoordiante: (latitude: 53.2610313, longitude: 50.0579958)) { (forecast, error) in
     ...
+}
+```
+
+##### 📆 Get weather forecast for next 5 days
+You can retrieve weather data for next five days for specific city by it's name and country code:
+```swift
+OpenWeatherMapKit.instance.weatherForecastForFiveDays(forCity: "Samara", withCountryCode: "ru") { (forecast, error) in
+...
+}
+```
+or for specific geo location by it's coordinates:
+```swift
+OpenWeatherMapKit.instance.weatherForecastForFiveDays(forCoordiante: (latitude: 53.2610313, longitude: 50.0579958)) { (forecast, error) in
+...
 }
 ```
 
@@ -70,14 +84,19 @@ For example, if you want to get information on current weather in celsius you ac
 weatherItem.celsius.currentTemp
 ```
 
+WeatherItem can be accessed from instances of `ForecastItem`. Here is example:
+```swift
+forecast.main.celsius.currentTemp
+```
+
 ## 🛣 Roadmap
 Please find project's roadmap below:
 
 | Version | ETA | Feature |
 | ------- | --- | ------- |
 | ✅ v0.1    | January 2018 | Current weather forecast by city & geo coordinates + support of different units (Celsius, Kelvin, Fahrenheit) |
-| v0.2 | April 2018 | Weather forecast for 5 days / 3 hour by city & geo coordinates. |
-| v0.3 | | 16 day daily forecast by city & geo coordinates. |
+| ✅ v0.2 | April 2018 | Weather forecast for 5 days / 3 hour by city & geo coordinates. |
+| v0.3 | Summer 2018 | 16 day daily forecast by city & geo coordinates. |
 
 <hr/>
 
