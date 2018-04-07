@@ -24,5 +24,5 @@ class WeatherItemCalculationTests: XCTestCase {
         XCTAssertEqual(weatherItem.fahrenheit.maxTemp, toFahrenheit(celsius: weatherItem.celsius.maxTemp))
         XCTAssertEqual(weatherItem.fahrenheit.minTemp, toFahrenheit(celsius: weatherItem.celsius.minTemp))
     }
-    
+
 }

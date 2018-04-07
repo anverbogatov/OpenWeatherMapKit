@@ -16,7 +16,7 @@ Pod::Spec.new do |s|
   #
 
   s.name         = "OpenWeatherMapKit"
-  s.version      = "0.1.0"
+  s.version      = "0.2.0"
   s.summary      = "Simple and handy access to OpenWeatherMap service right in your application."
 
   # This description is used to generate tags and improve search results.
@@ -63,7 +63,8 @@ Pod::Spec.new do |s|
   #  the deployment target. You can optionally include the target after the platform.
   #
 
-  s.platform     = :ios, "8.0"
+  s.ios.deployment_target = '8.0'
+  s.watchos.deployment_target = '2.0'
 
 
   # ――― Source Location ―――――――――――――――――――――――――――――――――――――――――――――――――――――――――― #
@@ -72,7 +73,7 @@ Pod::Spec.new do |s|
   #  Supports git, hg, bzr, svn and HTTP.
   #
 
-  s.source       = { :git => "https://github.com/anverbogatov/OpenWeatherMapKit.git", :tag => "0.1.0" }
+  s.source       = { :git => "https://github.com/anverbogatov/OpenWeatherMapKit.git", :tag => s.version }
 
 
   # ――― Source Code ―――――――――――――――――――――――――――――――――――――――――――――――――――――――――――――― #
