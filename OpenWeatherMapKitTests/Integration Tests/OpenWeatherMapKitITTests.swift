@@ -23,6 +23,8 @@ class OpenWeatherMapKitITTests: XCTestCase {
 
         OpenWeatherMapKit.instance.currentWeather(forCity: "Samara") { (weatherItem, error) in
             result = weatherItem
+            XCTAssertNotNil(result!.weather.last!.id)
+            XCTAssertNotNil(result!.weather.last!.icon)            
             caughtError = error
             ex.fulfill()
         }

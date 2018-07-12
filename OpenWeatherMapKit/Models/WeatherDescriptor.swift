@@ -9,6 +9,8 @@
 import Foundation
 
 public struct WeatherDescriptor : Codable {
+    public var id: Int
     public var main: String
     public var description: String
+    public var icon: String
 }
