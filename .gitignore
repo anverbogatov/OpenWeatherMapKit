@@ -108,3 +108,4 @@ xcuserdata/
 
 # End of https://www.gitignore.io/api/xcode,appcode,cocoapods
 /OpenWeatherMapKit.xcodeproj/project.xcworkspace/xcuserdata/anverbogatov.xcuserdatad/UserInterfaceState.xcuserstate
+.DS_Store
