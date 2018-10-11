@@ -2,7 +2,7 @@
 [![codecov](https://codecov.io/gh/anverbogatov/OpenWeatherMapKit/branch/master/graph/badge.svg)](https://codecov.io/gh/anverbogatov/OpenWeatherMapKit)
 [![Badge w/ Version](https://cocoapod-badges.herokuapp.com/v/OpenWeatherMapKit/badge.png)](https://cocoadocs.org/docsets/OpenWeatherMapKit)
 ||
-[![Swift](https://img.shields.io/badge/swift-4.0-orange.svg)](https://img.shields.io/badge/swift-4.0-orange.svg)
+[![Swift](https://img.shields.io/badge/swift-4.2-orange.svg)](https://img.shields.io/badge/swift-4.2-orange.svg)
 [![Badge w/ Platform](https://cocoapod-badges.herokuapp.com/p/OpenWeatherMapKit/badge.svg)](https://cocoadocs.org/docsets/OpenWeatherMapKit)
 
 # OpenWeatherMapKit
