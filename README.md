@@ -96,7 +96,7 @@ Please find project's roadmap below:
 | ------- | --- | ------- |
 | ✅ v0.1    | January 2018 | Current weather forecast by city & geo coordinates + support of different units (Celsius, Kelvin, Fahrenheit) |
 | ✅ v0.2 | April 2018 | Weather forecast for 5 days / 3 hour by city & geo coordinates. |
-| v0.3 | November 2018 | 16 day daily forecast by city & geo coordinates. |
+| v0.3 | ??? | 16 day daily forecast by city & geo coordinates. |
 
 <hr/>
 
