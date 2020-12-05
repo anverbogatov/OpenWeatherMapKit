@@ -5,6 +5,16 @@
 [![Swift](https://img.shields.io/badge/swift-4.2-orange.svg)](https://img.shields.io/badge/swift-4.2-orange.svg)
 [![Badge w/ Platform](https://cocoapod-badges.herokuapp.com/p/OpenWeatherMapKit/badge.svg)](https://cocoadocs.org/docsets/OpenWeatherMapKit)
 
+```
+⚠️ Message from author: ⚠️
+
+Guys thanks for your incredible support of that project. I see that it was useful for somebody and that makes me really happy.
+Anyway, since last years I was mainly working as cloud-native applications developer and was using other technologies, I have no
+plans to update this SDK at all.
+
+So, feel free to fork it and make your own implementation of it. There is no need to create issues / requests here.
+```
+
 # OpenWeatherMapKit
 OpenWeatherMapKit is a small and simple framework written in Swift that gives you access to all features of the OpenWeatherMap service's APIs right in your iOS / macOS / watchOS/ tvOS application.
 
